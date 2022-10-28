@@ -28,8 +28,8 @@ procs = [
   # PythonProcess("logmessaged", "system.logmessaged", offroad=True),
   # PythonProcess("timezoned", "system.timezoned", enabled=not PC, offroad=True),
 
-  DaemonProcess("manage_athenad", "selfdrive.athena.manage_athenad", "AthenadPid"),
-  NativeProcess("dmonitoringmodeld", "selfdrive/modeld", ["./dmonitoringmodeld"], enabled=dp_dm, callback=driverview),
+  #DaemonProcess("manage_athenad", "selfdrive.athena.manage_athenad", "AthenadPid"),
+  #NativeProcess("dmonitoringmodeld", "selfdrive/modeld", ["./dmonitoringmodeld"], enabled=dp_dm, callback=driverview),
   # NativeProcess("encoderd", "selfdrive/loggerd", ["./encoderd"]),
   # NativeProcess("loggerd", "selfdrive/loggerd", ["./loggerd"], onroad=False, callback=logging),
   NativeProcess("modeld", "selfdrive/modeld", ["./modeld"]),
