@@ -43,7 +43,7 @@ procs = [
   PythonProcess("torqued", "selfdrive.locationd.torqued"),
   PythonProcess("controlsd", "selfdrive.controls.controlsd"),
   # PythonProcess("deleter", "selfdrive.loggerd.deleter", offroad=True),
-  PythonProcess("dmonitoringd", "selfdrive.monitoring.dmonitoringd", enabled=dp_dm, callback=driverview),
+  #PythonProcess("dmonitoringd", "selfdrive.monitoring.dmonitoringd", enabled=dp_dm, callback=driverview),
   # PythonProcess("laikad", "selfdrive.locationd.laikad"),
   PythonProcess("navd", "selfdrive.navd.navd"),
   PythonProcess("pandad", "selfdrive.boardd.pandad", offroad=True),
@@ -69,7 +69,7 @@ procs = [
   PythonProcess("rawgpsd", "selfdrive.sensord.rawgps.rawgpsd", enabled=(TICI and os.path.isfile("/persist/comma/use-quectel-rawgps"))),
 
   # dp
-  PythonProcess("dpmonitoringd", "selfdrive.dragonpilot.dpmonitoringd", enabled=not dp_dm),
+  #PythonProcess("dpmonitoringd", "selfdrive.dragonpilot.dpmonitoringd", enabled=not dp_dm),
   PythonProcess("mapd", "selfdrive.mapd.mapd"),
   PythonProcess("systemd", "selfdrive.dragonpilot.systemd", offroad=True),
   PythonProcess("gpxd", "selfdrive.dragonpilot.gpxd"),
