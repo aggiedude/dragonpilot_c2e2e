@@ -101,7 +101,7 @@ class Controls:
 
     self.sm = sm
     if self.sm is None:
-      ignore = []
+      ignore = ['driverCameraState', 'driverMonitoringState']
       if SIMULATION:
         ignore += ['driverCameraState', 'managerState']
       if params.get_bool('WideCameraOnly'):
