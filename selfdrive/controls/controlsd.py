@@ -273,8 +273,8 @@ class Controls:
       self.events.add(EventName.pedalPressedPreEnable if self.disengage_on_accelerator else
                       EventName.gasPressedOverride)
 
-    if not self.CP.notCar and not self.dp_jetson:
-      self.events.add_from_msg(self.sm['driverMonitoringState'].events)
+    #if not self.CP.notCar and not self.dp_jetson:
+    #  self.events.add_from_msg(self.sm['driverMonitoringState'].events)
     self.events.add_from_msg(self.sm['longitudinalPlan'].eventsDEPRECATED)
 
     # Add car events, ignore if CAN isn't valid
@@ -789,8 +789,9 @@ class Controls:
       CC.actuatorsOutput = self.last_actuators
       self.steer_limited = abs(CC.actuators.steer - CC.actuatorsOutput.steer) > 1e-2
 
-    force_decel = False if self.dp_jetson else (self.sm['driverMonitoringState'].awarenessStatus < 0.) or \
-                  (self.state == State.softDisabling)
+    #force_decel = False if self.dp_jetson else (self.sm['driverMonitoringState'].awarenessStatus < 0.) or \
+    #              (self.state == State.softDisabling)
+    force_decel = (self.state == State.softDisabling)
 
     # Curvature & Steering angle
     params = self.sm['liveParameters']
